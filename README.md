@@ -137,9 +137,9 @@ print ("Here is an array with the square footages for each room:", areas_of_each
 
 ### A temperatures example
 
-Now, let's imagine we have a list of temperartures that represent the average high temperatures for each month of the year in NYC. Currently, this list has all the temperatures in farenheight. However, since NYC has such a large international presence and population, it would be great to also have these numbers in celsius as well. Without NumPy, we would have to access each element individually, get its value, convert the value to celcius, and add the new value to a new array. With NumPy, we can just multiply each element by the factor we need to convert farenheight to celcius.
+Now, let's imagine we have a list of temperartures that represent the average high temperatures for each month of the year in NYC. Currently, this list has all the temperatures in fahrenheit. However, since NYC has such a large international presence and population, it would be great to also have these numbers in celsius as well. Without NumPy, we would have to access each element individually, get its value, convert the value to celcius, and add the new value to a new array. With NumPy, we can just multiply each element by the factor we need to convert fahrenheit to celcius.
 
-The formula for converting farenheight to celsius is below: 
+The formula for converting fahrenheit to celsius is below: 
 ```
 T(°C) = (T(°F) - 32) × 5/9
 ```
@@ -147,7 +147,7 @@ Let's see an example of how we would perform this conversion with a python list 
 
 
 ```python
-# average temps in NYC from January -> December (in Farenheight)
+# average temps in NYC from January -> December (in fahrenheit)
 nyc_avg_temps_f = [39, 42, 50, 62, 72, 80, 85, 84, 76, 65, 54, 44]
 
 # ----- without NumPy -----
@@ -180,9 +180,9 @@ print("2. WITH NumPy:", np_nyc_avg_temps_c)
      29.44444444 28.88888889 24.44444444 18.33333333 12.22222222  6.66666667]
 
 
-Woah! Okay, we can see that in the first example, without NumPy, it took us **thirteen (13)** lines of code to accomplish the conversion from farenheight to celsius. With a NumPy array, we condensed that operation to **two (2)** lines of code. 
+Woah! Okay, we can see that in the first example, without NumPy, it took us **thirteen (13)** lines of code to accomplish the conversion from fahrenheit to celsius. With a NumPy array, we condensed that operation to **two (2)** lines of code. 
 
-Let's break this down. Essentially the problem was to operate on each number in the list of NYC average monthly temperatures. The operation was to convert the number in farenheight to celsius. To do this, without NumPy, we must access each value from the nyc_avg_temps_f list separately, use the value to convert it to celsius, and assign the converted value to the nyc_avg_temps_c list. *With* NumPy, we just need to use the variable name for the list, as if it were a single element, within the operation. NumPy then quickly performs the operation on each element and returns a **new** array.
+Let's break this down. Essentially the problem was to operate on each number in the list of NYC average monthly temperatures. The operation was to convert the number in fahrenheit to celsius. To do this, without NumPy, we must access each value from the nyc_avg_temps_f list separately, use the value to convert it to celsius, and assign the converted value to the nyc_avg_temps_c list. *With* NumPy, we just need to use the variable name for the list, as if it were a single element, within the operation. NumPy then quickly performs the operation on each element and returns a **new** array.
 
 Don't worry too much about how this is implemented behind the scenes. The key takeaway is that when we have large datasets that we want to operate on, NumPy can usually greatly simplify our code as well as make it more performant, which we will learn about later!
 
